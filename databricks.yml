@@ -1,19 +1,8 @@
 bundle:
   name: dabs
 
-resources:
-  jobs:
-    hello_job:
-      name: hello-job
-      tasks:
-        - task_key: hello
-          notebook_task:
-            notebook_path: ./src/hello.py
-          environment_key: default
-      environments:
-        - environment_key: default
-          spec:
-            environment_version: "4"
+include:
+  - resources/*.yml
 
 targets:
   dev:
